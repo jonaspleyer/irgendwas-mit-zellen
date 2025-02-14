@@ -1,0 +1,14 @@
+matplotlib
+seaborn
+numpy
+pytest
+sentence-transformers
+scanpy==1.10
+umap
+tqdm
+scikit-learn
+torch
+pandas
+scipy
+biopython
+transformers

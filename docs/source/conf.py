@@ -10,12 +10,12 @@ import os
 import sys
 
 sys.path.append(os.path.abspath("../../"))
-import cr_mech_coli
+import irgendwas_mit_zellen
 
-project = "cr_mech_coli"
-copyright = "2024, Jonas Pleyer"
-author = "Jonas Pleyer"
-release = "0.2.0"
+project = "irgendwas-mit-zellen"
+copyright = "2025, Maria Krissmer"
+author = "Maria Krissmer"
+release = "0.1.0"
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
@@ -56,8 +56,3 @@ html_static_path = ["_static"]
 bibtex_bibfiles = ["references.bib"]
 bibtex_default_style = "unsrt"
 bibtex_reference_style = "label"
-
-html_logo = "_static/cr_mech_coli_dark_mode.png"
-html_theme_options = {
-    "logo_only": True,
-}

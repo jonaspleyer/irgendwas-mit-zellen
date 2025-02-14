@@ -13,13 +13,6 @@ jobs:
         with:
           submodules: recursive
 
-      - name: Install stable toolchain
-        uses: actions-rs/toolchain@v1
-        with:
-          profile: minimal
-          toolchain: stable
-          override: true
-
       - uses: actions/checkout@v4
       - name: Set up Python 3.x
         uses: actions/setup-python@v5
@@ -32,17 +25,6 @@ jobs:
           python3 -m pip install --upgrade pip
           source .venv/bin/activate
           python3 -m pip install -r requirements.txt
-
-      - name: Build wheels
-        uses: PyO3/maturin-action@v1
-        with:
-          command: develop
-          args: --release
-      # Up until here!
-
-      - name: build cargo documentation in docs dir
-        run: |
-          cargo doc --no-deps --target-dir docs/build/html/rust_doc
 
       - name: Install Doc Requirements
         run: |
